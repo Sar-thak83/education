@@ -242,18 +242,6 @@ Main endpoint categories:
 - `/payment` - Payment processing
 - `/profile` - User profile management
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is intended as a learning tool and can be used as a sample project for educational or personal projects.
-
 ## 🆘 Troubleshooting
 
 ### Common Issues

@@ -32,16 +32,16 @@ const ForgotPassword = () => {
 
           <p className="text-[#AFB2BF] my-4 text-lg leading-[1.625rem]">
             {!emailSent ? (
-              <p>
+              <span>
                 Have no fear. We'll email you instructions to reset your
                 password. If you don't have access to your email we can try
                 account recovery
-              </p>
+              </span>
             ) : (
-              <p>
+              <span>
                 We have sent the reset email to your email account{" "}
                 <span className="font-bold">{email}</span>
-              </p>
+              </span>
             )}
           </p>
 

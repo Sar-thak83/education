@@ -12,7 +12,7 @@ const emailSender = async (toEmail, subject, body) => {
     });
     // Mail transpoter is created using nodemailer
     const info = await transporter.sendMail({
-      from: `${process.env.FROM_NAME}  <${process.env.FROM_EMAIL}>`,
+      from: `${process.env.FROM_NAME || "StudyNotion"}  <${process.env.FROM_EMAIL || process.env.MAIL_FROM_EMAIL}>`,
       to: toEmail,
       subject: subject,
       html: body,

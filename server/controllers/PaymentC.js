@@ -331,6 +331,7 @@ const addCourse = async (res, courseId, userId) => {
       data: "Course added to user",
     });
   } catch (err) {
+    console.error("Course added but email failed:", err);
     res.status(200).json({
       success: true,
       data: "Course added to user, but failed to send course enrollment email",

@@ -27,7 +27,7 @@ const sendOtpEmail = async (toEmail, otp) => {
       emailOtpTemplate(otp)
     );
   } catch (err) {
-    clgDev(`Error occurred while sending otp : ${err.message}`);
+    console.error(`Error occurred while sending otp : ${err.message}`);
     throw err;
   }
 };

@@ -43,12 +43,20 @@ const corsOptions = {
   },
   credentials: true,
   optionsSuccessStatus: 200,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
 // Middleware
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
+
+// Apply CORS before other middleware
+app.use(cors(corsOptions));
+
+// Handle preflight requests
+app.options('*', cors(corsOptions));
 
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
@@ -59,7 +67,6 @@ app.use(
   })
 );
 app.use(cookieParser());
-app.use(cors(corsOptions));
 
 // Routes
 const AuthR = require('../server/routes/AuthR');

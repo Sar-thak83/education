@@ -1,6 +1,6 @@
 import { toast } from "react-hot-toast"
 import { categoriesApi, reviewApi } from "../apis";
-import { apiConnector } from "../apiConnector";
+import { apiConnector } from "../apiconnector";
 
 // Get all reviews
 export const getAllReviews = async () => {

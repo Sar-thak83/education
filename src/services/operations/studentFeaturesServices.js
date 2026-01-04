@@ -1,6 +1,6 @@
 import { toast } from 'react-hot-toast';
 import { courseApi, courseProgressApi, reviewApi, userApi } from '../apis';
-import { apiConnector } from '../apiConnector';
+import { apiConnector } from '../apiconnector';
 import { setCourseData, setCompletedVideos, setTotalNoOfVideos } from '../../redux/slices/viewCourseSlice';
 
 export const getEnrolledCourses = async (token, setEnrolledCourses, dispatch, navigate) => {

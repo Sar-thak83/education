@@ -1,6 +1,6 @@
 import { toast } from "react-hot-toast"
 import { sectionApi, subsectionApi } from "../apis";
-import { apiConnector } from "../apiConnector";
+import { apiConnector } from "../apiconnector";
 
 
 // Create section

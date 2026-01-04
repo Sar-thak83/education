@@ -1,5 +1,5 @@
 import { toast } from 'react-hot-toast'
-import { apiConnector } from '../apiConnector';
+import { apiConnector } from '../apiconnector';
 import { otherApi } from '../apis';
 
 export const contactUs = async (contactData, setLoading, reset) => {

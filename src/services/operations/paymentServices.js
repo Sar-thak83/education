@@ -1,5 +1,5 @@
 import { toast } from "react-hot-toast";
-import { apiConnector } from "../apiConnector";
+import { apiConnector } from "../apiconnector";
 import { paymentApi } from "../apis";
 import rzp_logo from "../../assets/Logo/rzp_logo.png";
 import { setPaymentLoading } from "../../redux/slices/profileSlice";

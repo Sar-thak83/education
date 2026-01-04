@@ -1,6 +1,6 @@
 import { toast } from "react-hot-toast"
 import { categoriesApi, courseApi, reviewApi, userApi } from "../apis";
-import { apiConnector } from "../apiConnector";
+import { apiConnector } from "../apiconnector";
 
 // Fetch all categories
 export const fetchCourseCategories = async (dispatch, navigate) => {

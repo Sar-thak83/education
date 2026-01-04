@@ -1,7 +1,7 @@
 import { toast } from 'react-hot-toast'
 import { setLoading, setToken } from "../../redux/slices/authSlice"
 import { setUser } from "../../redux/slices/profileSlice";
-import { apiConnector } from "../apiConnector";
+import { apiConnector } from "../apiconnector";
 import { authApi } from "../apis";
 
 export const login = async (email, password, dispatch, navigate) => {

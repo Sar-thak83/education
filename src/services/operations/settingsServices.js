@@ -1,6 +1,6 @@
 import { toast } from "react-hot-toast"
 import { authApi, profileApi, userApi } from "../apis"
-import { apiConnector } from "../apiConnector";
+import { apiConnector } from "../apiconnector";
 import { getCurrentUser } from "./profileServices";
 import { setUser } from "../../redux/slices/profileSlice";
 import { deleteBrowserData } from "./authServices";

@@ -15,7 +15,7 @@ import PageNotFound from "./pages/PageNotFound";
 import Navbar from "./components/common/Navbar";
 import PublicRoute from "./components/core/Auth/PublicRoute";
 import PrivateRoute from "./components/core/Auth/PrivateRoute";
-import DashBoard from "./pages/DashBoard";
+import DashBoard from "./pages/Dashboard";
 import MyProfile from "./components/core/Dashboard/MyProfile";
 import Settings from "./components/core/Dashboard/Settings/Settings";
 import Cart from "./components/core/Dashboard/Cart/Cart";

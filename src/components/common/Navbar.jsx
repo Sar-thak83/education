@@ -11,7 +11,7 @@ import {
   AiOutlineContacts,
 } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import ProfileDropDown from "../core/Auth/ProfileDropDown";
+import ProfileDropDown from "../core/Auth/profileDropDown";
 import { toast } from "react-hot-toast";
 import { GiHamburgerMenu } from "react-icons/gi";
 import HamburgerMenu from "./HamburgerMenu";

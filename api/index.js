@@ -21,30 +21,13 @@ const errorHandler = require('../server/middlewares/errorHandler');
 connectDB();
 cloudinaryConnect();
 
-// CORS Configuration
+// CORS Configuration - Allow all Vercel deployments
 const corsOptions = {
-  origin: function (origin, callback) {th
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    
-    // Allow all Vercel preview and production URLs
-    const allowedOrigins = [
-      'http://localhost:3000',
-      'http://localhost:5173',
-      process.env.STUDY_NOTION_FRONTEND_SITE,
-    ].filter(Boolean);
-    
-    // Allow any Vercel deployment URL
-    if (origin.includes('vercel.app') || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: true, // Allow all origins for now
   credentials: true,
   optionsSuccessStatus: 200,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
 };
 
 // Middleware

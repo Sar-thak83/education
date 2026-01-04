@@ -23,11 +23,24 @@ cloudinaryConnect();
 
 // CORS Configuration
 const corsOptions = {
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:5173',
-    process.env.STUDY_NOTION_FRONTEND_SITE || 'http://localhost:3000',
-  ].filter(Boolean),
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    // Allow all Vercel preview and production URLs
+    const allowedOrigins = [
+      'http://localhost:3000',
+      'http://localhost:5173',
+      process.env.STUDY_NOTION_FRONTEND_SITE,
+    ].filter(Boolean);
+    
+    // Allow any Vercel deployment URL
+    if (origin.includes('vercel.app') || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
   optionsSuccessStatus: 200,
 };

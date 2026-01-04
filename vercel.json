@@ -11,8 +11,5 @@
       "source": "/:path*",
       "destination": "/index.html"
     }
-  ],
-  "env": {
-    "VITE_BASE_URL": "@VITE_BASE_URL"
-  }
+  ]
 }
